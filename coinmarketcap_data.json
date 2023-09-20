@@ -1,0 +1,61 @@
+{
+  "status": {
+    "timestamp": "2023-09-20T00:55:56.734Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 0,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "active_cryptocurrencies": 3962,
+    "total_cryptocurrencies": 9311,
+    "active_market_pairs": 5498,
+    "active_exchanges": 6052,
+    "total_exchanges": 4801,
+    "eth_dominance": 0.57471936342793,
+    "btc_dominance": 0.4216039786829098,
+    "eth_dominance_yesterday": 0.015854953209088585,
+    "btc_dominance_yesterday": 0.6904998864729541,
+    "eth_dominance_24h_percentage_change": 0.5009516724195207,
+    "btc_dominance_24h_percentage_change": 0.13263274033471117,
+    "defi_volume_24h": 0.27004550626501644,
+    "defi_volume_24h_reported": 0.9703183903828905,
+    "defi_market_cap": 0.3603222227997638,
+    "defi_24h_percentage_change": 0.37715515719484416,
+    "stablecoin_volume_24h": 0.8058981834845433,
+    "stablecoin_volume_24h_reported": 0.7777144209730402,
+    "stablecoin_market_cap": 0.9513537859837864,
+    "stablecoin_24h_percentage_change": 0.6189055046473584,
+    "derivatives_volume_24h": 0.2615561704407279,
+    "derivatives_volume_24h_reported": 0.8206807443011943,
+    "derivatives_24h_percentage_change": 0.15156408684894562,
+    "quote": {
+      "USD": {
+        "total_market_cap": 0.30131062584051715,
+        "total_volume_24h": 0.49180317951086616,
+        "total_volume_24h_reported": 0.18379725505871458,
+        "altcoin_volume_24h": 0.31379330286186335,
+        "altcoin_volume_24h_reported": 0.8807268879299579,
+        "altcoin_market_cap": 0.5722896026606592,
+        "defi_volume_24h": 0.16298691663445242,
+        "defi_volume_24h_reported": 0.4498332478397695,
+        "defi_24h_percentage_change": 0.34811484979562435,
+        "defi_market_cap": 0.5492032350426528,
+        "stablecoin_volume_24h": 0.7793411100357697,
+        "stablecoin_volume_24h_reported": 0.862665366290386,
+        "stablecoin_24h_percentage_change": 0.59731644566082,
+        "stablecoin_market_cap": 0.9442338596699462,
+        "derivatives_volume_24h": 0.5981570409786705,
+        "derivatives_volume_24h_reported": 0.09946709216278293,
+        "derivatives_24h_percentage_change": 0.0238672407856364,
+        "last_updated": "2023-09-20T00:55:56.734Z",
+        "total_market_cap_yesterday": 0.6303192475347306,
+        "total_volume_24h_yesterday": 0.13570457975840666,
+        "total_market_cap_yesterday_percentage_change": 0.8616985527206991,
+        "total_volume_24h_yesterday_percentage_change": 0.28618439631613035
+      }
+    },
+    "last_updated": "2023-09-20T00:55:56.734Z"
+  }
+}

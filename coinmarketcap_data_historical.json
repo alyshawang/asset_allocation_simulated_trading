@@ -1,0 +1,194 @@
+{
+  "status": {
+    "timestamp": "2023-09-20T00:57:03.688Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 1,
+    "credit_count": 1,
+    "notice": null
+  },
+  "data": {
+    "quotes": [
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.39470472983100024,
+        "active_cryptocurrencies": 9754,
+        "active_exchanges": 9264,
+        "active_market_pairs": 5091,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.5388501764070923,
+            "total_volume_24h": 0.8253973540480262,
+            "total_volume_24h_reported": 4047,
+            "altcoin_market_cap": 7855,
+            "altcoin_volume_24h": 1444,
+            "altcoin_volume_24h_reported": 6112,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.4827059223787562,
+        "active_cryptocurrencies": 3553,
+        "active_exchanges": 3121,
+        "active_market_pairs": 9046,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.7490383497035045,
+            "total_volume_24h": 0.11855653210069228,
+            "total_volume_24h_reported": 2318,
+            "altcoin_market_cap": 3412,
+            "altcoin_volume_24h": 9765,
+            "altcoin_volume_24h_reported": 2895,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.9152481973539017,
+        "active_cryptocurrencies": 2679,
+        "active_exchanges": 4482,
+        "active_market_pairs": 723,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.4649685729314239,
+            "total_volume_24h": 0.389246228231547,
+            "total_volume_24h_reported": 3548,
+            "altcoin_market_cap": 4393,
+            "altcoin_volume_24h": 4704,
+            "altcoin_volume_24h_reported": 9511,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.7593752487819674,
+        "active_cryptocurrencies": 6468,
+        "active_exchanges": 2284,
+        "active_market_pairs": 8942,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.9092273965243103,
+            "total_volume_24h": 0.3456901704502833,
+            "total_volume_24h_reported": 7397,
+            "altcoin_market_cap": 2422,
+            "altcoin_volume_24h": 8413,
+            "altcoin_volume_24h_reported": 2155,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.8552873407925807,
+        "active_cryptocurrencies": 7657,
+        "active_exchanges": 9141,
+        "active_market_pairs": 3520,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.4086393343857899,
+            "total_volume_24h": 0.8227737993703932,
+            "total_volume_24h_reported": 743,
+            "altcoin_market_cap": 920,
+            "altcoin_volume_24h": 304,
+            "altcoin_volume_24h_reported": 1471,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.6769314478840462,
+        "active_cryptocurrencies": 2299,
+        "active_exchanges": 9063,
+        "active_market_pairs": 2007,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.6616389091262567,
+            "total_volume_24h": 0.8646972511836608,
+            "total_volume_24h_reported": 5574,
+            "altcoin_market_cap": 8997,
+            "altcoin_volume_24h": 5551,
+            "altcoin_volume_24h_reported": 7651,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.2678648276895952,
+        "active_cryptocurrencies": 8795,
+        "active_exchanges": 5108,
+        "active_market_pairs": 8937,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.3877874637452723,
+            "total_volume_24h": 0.13137682070053502,
+            "total_volume_24h_reported": 5701,
+            "altcoin_market_cap": 4241,
+            "altcoin_volume_24h": 2315,
+            "altcoin_volume_24h_reported": 7496,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.03072649403321126,
+        "active_cryptocurrencies": 693,
+        "active_exchanges": 8491,
+        "active_market_pairs": 8921,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.5168198017803152,
+            "total_volume_24h": 0.6683425657442437,
+            "total_volume_24h_reported": 5139,
+            "altcoin_market_cap": 9832,
+            "altcoin_volume_24h": 842,
+            "altcoin_volume_24h_reported": 8837,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.026574128066519265,
+        "active_cryptocurrencies": 5126,
+        "active_exchanges": 5921,
+        "active_market_pairs": 5826,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.9449618995869551,
+            "total_volume_24h": 0.6016429657033289,
+            "total_volume_24h_reported": 8659,
+            "altcoin_market_cap": 4825,
+            "altcoin_volume_24h": 3844,
+            "altcoin_volume_24h_reported": 9563,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2023-09-20T00:57:03.688Z",
+        "btc_dominance": 0.8854092900003809,
+        "active_cryptocurrencies": 6582,
+        "active_exchanges": 8980,
+        "active_market_pairs": 8265,
+        "quote": {
+          "USD": {
+            "total_market_cap": 0.0018186820783014923,
+            "total_volume_24h": 0.9126109156081896,
+            "total_volume_24h_reported": 6419,
+            "altcoin_market_cap": 358,
+            "altcoin_volume_24h": 8923,
+            "altcoin_volume_24h_reported": 8845,
+            "timestamp": "2023-09-20T00:57:03.688Z"
+          }
+        }
+      }
+    ]
+  }
+}
