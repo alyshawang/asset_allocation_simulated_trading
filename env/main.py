@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
 
 
 class SimpleTradingEnv(gym.Env):
@@ -39,8 +36,12 @@ class SimpleTradingEnv(gym.Env):
         self.current_step += 1
         done = self.current_step >= self.max_steps
 
-        observation = self._get_observation()
-        reward = 0.0
+        if not done:
+            observation = self._get_observation()
+            reward = self._calculate_reward(action)
+        else:
+            observation = None
+            reward = 0.0
         info = {}
 
         return observation, reward, done, info
@@ -54,8 +55,30 @@ class SimpleTradingEnv(gym.Env):
         else:
             stock_prices = self.prices.iloc[start_index:end_index].values
             observation = stock_prices.flatten()
+            # stock_data = yf.download(self.stock_tickers, start = start_date, end = end_date)
+            # observation = stock_data['Close'].values
 
         return observation
+    
+    def _calculate_reward(self, action):
+        current_price = self.prices.iloc[self.current_step]['Close']
+        previous_price = self.prices.iloc[self.current_step - 1]['Close']
+
+        price_change = current_price - previous_price
+
+        buy_threshold = 0.015 # unsure 
+        sell_threshold = 0.005
+        
+        # why do we want to buy when the price change is > 0
+        if action == 0 and price_change > buy_threshold:
+            reward = 1.0
+        elif action == 1 and price_change < -sell_threshold: 
+            reward = -1.0 
+        else:
+            reward = 0.0
+        return reward
+
+
 
     def render(self, mode='human'):
         # Implement rendering if needed
