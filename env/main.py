@@ -4,10 +4,6 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a7844dadbeddb570e08bbf12803e324931df6e90
 
 class SimpleTradingEnv(gym.Env):
     def __init__(self, stock_tickers, start_date, end_date):
@@ -63,26 +59,6 @@ class SimpleTradingEnv(gym.Env):
             # observation = stock_data['Close'].values
 
         return observation
-    
-    def _calculate_reward(self, action):
-        current_price = self.prices.iloc[self.current_step]['Close']
-        previous_price = self.prices.iloc[self.current_step - 1]['Close']
-
-        price_change = current_price - previous_price
-
-        buy_threshold = 0.015 # unsure 
-        sell_threshold = 0.005
-        
-        # why do we want to buy when the price change is > 0
-        if action == 0 and price_change > buy_threshold:
-            reward = 1.0
-        elif action == 1 and price_change < -sell_threshold: 
-            reward = -1.0 
-        else:
-            reward = 0.0
-        return reward
-
-
 
     # def _calculate_reward(self, action):
     #     current_price = self.prices.iloc[self.current_step]['Close']
