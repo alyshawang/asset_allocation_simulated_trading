@@ -40,7 +40,11 @@ class SimpleTradingEnv(gym.Env):
         done = self.current_step >= self.max_steps
 
         observation = self._get_observation()
+
+        # Implement reward function
         reward = 0.0
+
+        # specify information fields to use in steps
         info = {}
 
         return observation, reward, done, info
