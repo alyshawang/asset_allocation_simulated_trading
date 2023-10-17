@@ -4,10 +4,6 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-
 
 class SimpleTradingEnv(gym.Env):
     def __init__(self, stock_tickers, start_date, end_date):
@@ -16,7 +12,8 @@ class SimpleTradingEnv(gym.Env):
         self.stock_tickers = stock_tickers
         self.num_stocks = len(stock_tickers)
 
-        self.observation_space = spaces.Box(low = 0, high = 1, shape = (self.num_stocks, ))
+        self.observation_space = spaces.Box(
+            low=0, high=1, shape=(self.num_stocks, ))
         self.action_space = spaces.Discrete(self.num_stocks + 1)
 
         self.current_step = 0
@@ -26,9 +23,9 @@ class SimpleTradingEnv(gym.Env):
         self.max_steps = len(self.prices)
 
     def _download_prices(self):
-        stock_data = yf.download(self.stock_tickers, start = self.start_date,
-            end = self.end_date)
-        return stock_data['Close']
+        stock_data = yf.download(self.stock_tickers, start=self.start_date,
+                                 end=self.end_date)
+        return stock_data
 
     def reset(self):
         self.current_step = 0
@@ -40,11 +37,7 @@ class SimpleTradingEnv(gym.Env):
         done = self.current_step >= self.max_steps
 
         observation = self._get_observation()
-
-        # Implement reward function
         reward = 0.0
-
-        # specify information fields to use in steps
         info = {}
 
         return observation, reward, done, info
@@ -56,10 +49,50 @@ class SimpleTradingEnv(gym.Env):
         if end_index <= start_index:
             observation = np.zeros((self.num_stocks,))
         else:
-            stock_prices = self.prices.iloc[start_index:end_index].values
+            stock_prices = self.prices.iloc[start_index:end_index]['Close'].values
             observation = stock_prices.flatten()
+            # stock_data = yf.download(self.stock_tickers, start = start_date, end = end_date)
+            # observation = stock_data['Close'].values
 
         return observation
+
+    # def _calculate_reward(self, action):
+    #     current_price = self.prices.iloc[self.current_step]['Close']
+    #     previous_price = self.prices.iloc[self.current_step - 1]['Close']
+
+    #     price_change = current_price - previous_price
+
+    #     buy_threshold = 0.015  # unsure
+    #     sell_threshold = 0.005
+
+    #     # why do we want to buy when the price change is > 0
+    #     if action == 0 and price_change > buy_threshold:
+    #         reward = 1.0
+    #     elif action == 1 and price_change < -sell_threshold:
+    #         reward = -1.0
+    #     else:
+    #         reward = 0.0
+    #     return reward
+
+    def _calculate_reward(self, action):
+        if self.current_step == 0:
+            reward = 0.0
+        else:
+            current_price = self.prices.iloc[self.current_step]['Close']
+            previous_price = self.prices.iloc[self.current_step - 1]['Close']
+
+            price_change = current_price - previous_price
+
+            buy_threshold = 0.015
+            sell_threshold = 0.005
+
+            if action == 0 and price_change.iloc[0] > buy_threshold:
+                reward = 1.0
+            elif action == 1 and price_change.iloc[0] < -sell_threshold:
+                reward = -1.0
+            else:
+                reward = 0.0
+        return reward
 
     def render(self, mode='human'):
         # Implement rendering if needed
@@ -68,6 +101,7 @@ class SimpleTradingEnv(gym.Env):
     def close(self):
         # Implement any cleanup operations
         pass
+
 
 if __name__ == "__main__":
     stock_tickers = ['AAPL', 'GOOGL', 'MSFT', 'AMZN']
